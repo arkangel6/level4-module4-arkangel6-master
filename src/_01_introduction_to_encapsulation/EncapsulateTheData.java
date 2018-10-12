@@ -1,5 +1,7 @@
 package _01_introduction_to_encapsulation;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 /*
  * Encapsulation is a way of protecting the data in a class from being
  * unintentionally altered from another class.
@@ -28,7 +30,9 @@ public class EncapsulateTheData {
 	Object memberObj; // can be any object type except String. Strings get turned into objects.
 
 	public static void main(String[] args) {
-
+		
+		
+		
 	}
 
 	public int getItemsRecieved() {
@@ -43,6 +47,10 @@ public class EncapsulateTheData {
 
 	public float getDegreesTurned() {
 		return degreesTurned;
+	}
+	
+	public void setDegreesTurned(float x) {
+		degreesTurned = x;
 	}
 
 	public String getNomenclature() {
@@ -62,7 +70,7 @@ public class EncapsulateTheData {
 	}
 
 	public void setmemberObj(Object x) {
-
+		memberObj = x;
 	}
 
 }
