@@ -20,11 +20,11 @@ public abstract class Polymorph {
     }
     
     public void setX(int x) {
-    	 x = this.x;
+    	 this.x = x;
     }
     
     public void setY(int y) {
-    	y = this.y;
+    this.y = y;
     }
     
     

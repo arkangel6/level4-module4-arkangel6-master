@@ -13,13 +13,15 @@ public class MovingMorph extends Polymorph{
 	public void update() {
 		setX(getX()+2);
 		setY(getY()+2);
+		//System.out.println(getX() + "update");
 	}
 
 	@Override
 	public void draw(Graphics g) {
 		g.setColor(Color.green);
-		g.fillRect(50, 50, 90+getX(), 70+getY());
-		update();
+		g.fillRect(getX(), getY(), 50, 50);
+		//System.out.println(getX() + " " + getY());
+		
 		
 	}
 }
