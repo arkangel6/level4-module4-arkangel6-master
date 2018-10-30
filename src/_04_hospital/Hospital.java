@@ -37,25 +37,32 @@ public class Hospital {
 
 	public void assignPatientsToDoctors() {
 
+		System.out.println(patientList.size());
+		System.out.println(doctorList.size());
+		
 		int count = 0;
-		for (int j = 0; j < doctorList.size(); j++) {
+		for (int j = 0; j < patientList.size(); j++) {
 
-			for (int i = 0; i < 3; i++) {
-				if (patientList.size() < i + count) {
-
+			if(doctorList.get(count).patientListD.size() == 3) {
+				count++;
+			}
+				
+					
 					try {
-						doctorList.get(j).assignPatient(patientList.get(i + count));
+						doctorList.get(count).assignPatient(patientList.get(j));
 					} catch (DoctorFullException e) {
 						// TODO Auto-generated catch block
-						e.printStackTrace();
+						//e.printStackTrace();
+						//count++;
 					}
 
-					// System.out.println(i + count);
-				}
+			
+				
 			}
-			count = count + 3;
+			//count = count + 3;
 
-		}
+		
+		
 
 		System.out.println(doctorList.get(0).getPatients().size());
 		System.out.println(doctorList.get(1).getPatients().size());

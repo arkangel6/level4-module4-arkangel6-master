@@ -36,7 +36,6 @@ public class PolymorphWindow extends JPanel implements ActionListener {
 		window.getContentPane().setPreferredSize(new Dimension(500, 500));
 		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		window.pack();
-		window.setVisible(true);
 
 		// bluePoly = new BluePolymorph(50, 50);
 		// redPoly = new RedMorph(70, 30);
@@ -45,12 +44,13 @@ public class PolymorphWindow extends JPanel implements ActionListener {
 		circlePoly = new CirclePoly(150, 150);
 		mousePoly = new MousePoly(150, 150);
 		messagePoly = new MessageMorph(30, 30);
-		imagePoly = new ImageMorph(40, 230);
+		imagePoly = new ImageMorph(90, 230);
 		window.addMouseListener((MouseListener) mousePoly);
 		window.addMouseListener((MouseListener) messagePoly);
 
 		timer = new Timer(1000 / 30, this);
 		timer.start();
+		window.setVisible(true);
 	}
 
 	public void paintComponent(Graphics g) {
